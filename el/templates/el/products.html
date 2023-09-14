@@ -1,0 +1,49 @@
+{% extends 'el/base.html' %}
+{% load crispy_forms_tags %}
+{% block title %} About {% endblock title %}
+
+{% block content%}
+<div class="row text-center pt-2">
+  <div class="col-10 offset-1 mt-3">
+    <div class="card card-body">
+      <form method="">
+        {{ myFilter.form }}
+        <button class="btn btn-secondary" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="col-lg-6 offset-lg-3 col-md-10 offset-md-1 mt-3">
+  <div class="card">
+    <div class="card-header bg-dark text-light">
+      <h5>Products</h5>
+    </div>
+
+    <div class="card-body">
+      <table class="table table-sm">
+        <tr>
+          <th>Item Code</th>
+          <th>Kind</th>
+          <th>Purpose</th>
+          <th>Description</th>
+          <th>Size</th>
+          <th>Brand</th>
+
+
+        </tr>
+        {% for product in products %}
+        <tr>
+          <td>{{ product.id}}</td>
+          <td>{{ product.kind}}</td>
+          <td>{{ product.purpose}}</td>
+          <td>{{ product.description}}</td>
+          <td>{{ product.size_in }} - {{ product.size_mm }}</td>
+          <td>{{ product.brand}}</td>
+
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock content%}

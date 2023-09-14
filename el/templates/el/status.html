@@ -1,0 +1,42 @@
+{% load static %}
+<div class="container text-center mt-3">
+  <div class="row m-3">
+    <div class="col">
+      <h1>Total Orders: {{ total_orders }}</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+        <div class="card text-center text-white" id="card-initial">
+            <div class="card-header h3">Initial</div>
+            <div class="card-body">
+              <h5 class="card-title">{{ initial }}</h5>              
+            </div>
+          </div>
+    </div>
+    <div class="col">
+        <div class="card text-center text-white" id="card-pending">
+            <div class="card-header h3">Pending</div>
+            <div class="card-body">
+              <h5 class="card-title">{{ pending }}</h5>
+            </div>
+          </div>
+    </div>
+    <div class="col">
+        <div class="card text-center text-white" id="card-ofd">
+            <div class="card-header h3 text-nowrap">For Delivery</div>
+            <div class="card-body">
+              <h5 class="card-title">{{ ofd }}</h5>
+            </div>
+          </div>
+    </div>
+    <div class="col">
+      <div class="card text-center text-white" id="card-delivered">
+          <div class="card-header h3">Delivered</div>
+          <div class="card-body">
+            <h5 class="card-title">{{ delivered }}</h5>
+          </div>
+        </div>
+  </div>
+  </div>
+</div>

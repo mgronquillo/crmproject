@@ -1,0 +1,12 @@
+#card-initial{
+    background-color: #605F5E;
+}
+#card-pending{
+    background-color: #e64a52;
+}
+#card-ofd{
+    background-color: #1F487E;
+}
+#card-delivered{
+    background-color: #1D3461;
+}

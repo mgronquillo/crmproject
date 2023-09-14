@@ -1,0 +1,6 @@
+# IGNORE CACHE
+crm/__pycache__
+# IGNORE EXECUTABLES
+*.exe
+# IGNORE CSV FILES
+*.csv
